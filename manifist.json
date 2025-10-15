@@ -1,0 +1,21 @@
+{
+  "name": "My Tasks PWA",
+  "short_name": "Tasks",
+  "description": "A simple, offline-ready To-Do List Progressive Web App.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f4f8fb",
+  "theme_color": "#315c7c",
+  "icons": [
+    {
+      "src": "bell.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "bell.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

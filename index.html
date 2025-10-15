@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task Manager PWA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="manifest.json" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="bell.png" type="image/png" />
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col font-sans">
+
+  <header class="bg-blue-600 text-white shadow-md py-4">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <div class="flex items-center gap-2">
+        <img src="bell.png" alt="Bell Icon" class="w-8 h-8" />
+        <h1 class="text-xl font-semibold">Task Manager</h1>
+      </div>
+      <button id="installBtn" class="hidden bg-white text-blue-600 px-3 py-1 rounded-md hover:bg-blue-100 transition">Add to Home Screen</button>
+    </div>
+  </header>
+
+  <main class="flex-1 container mx-auto px-6 py-8">
+    <form id="taskForm" class="flex flex-col md:flex-row md:items-end gap-4 bg-white shadow-sm p-4 rounded-lg border border-gray-100 mb-8">
+      <div class="flex-1">
+        <label for="taskInput" class="block text-sm font-medium text-gray-700 mb-1">Task Name</label>
+        <input type="text" id="taskInput" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your task..." required />
+      </div>
+
+      <div>
+        <label for="dateInput" class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+        <input type="date" id="dateInput" class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+      </div>
+
+      <div>
+        <label for="timeInput" class="block text-sm font-medium text-gray-700 mb-1">Time</label>
+        <input type="time" id="timeInput" class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+      </div>
+
+      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition">Add Task</button>
+    </form>
+
+    <div id="taskList" class="space-y-4"></div>
+  </main>
+
+
+  <script src="idb.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
